@@ -19,35 +19,40 @@ public class Calculator {
 	 * @return total	current total
 	 */
 	public int getTotal () {
-		return 0;
+		return total;
 	}
 	
 	/** adds a value to current total
 	 * @param value		integer to be added
 	 */
 	public void add (int value) {
-		
+		total = total + value;
 	}
 	
 	/** subtracts a value from the current total
 	 * @param value		integer to be subtracted
 	 */
 	public void subtract (int value) {
-		
+		total = total - value;
 	}
 	
 	/** multiplies current total by given value
 	 * @param value		integer used to multiply
 	 */
 	public void multiply (int value) {
-		
+		total = total*value;
 	}
 	
 	/** divides current total by given value. If the value is 0 sets total to 0
 	 * @param value		integer used to divide
 	 */
 	public void divide (int value) {
-		
+		if(value == 0){
+			total = 0;
+		}
+		else{
+			total = total/value;
+		}
 	}
 	
 	/** returns a string that contains a list of the commands executed 

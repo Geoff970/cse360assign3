@@ -14,31 +14,86 @@ public class CalculatorTest {
 	
 	@Test
 	public void testGetTotal() {
-		fail("Not yet implemented");
+		Calculator calc = new Calculator();
+		assertEquals(calc.getTotal(),0);
+	}
+	
+	@Test
+	public void testAddEmpty() {
+		Calculator calc = new Calculator();
+		calc.add(3);
+		assertEquals(calc.getTotal(),3);
 	}
 	
 	@Test
 	public void testAdd() {
-		fail("Not yet implemented");
+		Calculator calc = new Calculator();
+		calc.add(3);
+		calc.add(5);
+		assertEquals(calc.getTotal(),8);
 	}
 
 	@Test
+	public void testSubtractEmpty() {
+		Calculator calc = new Calculator();
+		calc.subtract(2);
+		assertEquals(calc.getTotal(),-2);
+	}
+	
+	@Test
 	public void testSubtract() {
-		fail("Not yet implemented");
+		Calculator calc = new Calculator();
+		calc.add(10);
+		calc.subtract(2);
+		assertEquals(calc.getTotal(),8);
+	}
+	
+	@Test
+	public void testMultiplyEmpty() {
+		Calculator calc = new Calculator();
+		calc.multiply(3);
+		assertEquals(calc.getTotal(),0);
 	}
 	
 	@Test
 	public void testMultiply() {
-		fail("Not yet implemented");
+		Calculator calc = new Calculator();
+		calc.add(10);
+		calc.multiply(3);
+		assertEquals(calc.getTotal(),30);
 	}
 	
+	
 	@Test
+	public void testDivideEmpty() {
+		Calculator calc = new Calculator();
+		calc.divide(10);
+		assertEquals(calc.getTotal(),0);
+	}
+	
 	public void testDivide() {
-		fail("Not yet implemented");
+		Calculator calc = new Calculator();
+		calc.add(10);
+		calc.divide(10);
+		assertEquals(calc.getTotal(),1);
 	}
 	
-	@Test
-	public void testGetHistory() {
-		fail("Not yet implemented");
+	public void testDivideRemainder() {
+		Calculator calc = new Calculator();
+		calc.add(10);
+		calc.divide(8);
+		assertEquals(calc.getTotal(),1);
 	}
+	
+	public void testDivideByZero() {
+		Calculator calc = new Calculator();
+		calc.add(10);
+		calc.divide(0);
+		assertEquals(calc.getTotal(),0);
+	}
+	
+	//@Test
+	//public void testGetHistory() {
+	//	fail("Not yet implemented");
+	//}
 }
